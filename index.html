@@ -40,7 +40,7 @@
         /* Navbar Styles */
         .navbar {
             width: 100%;
-            background-image: url("Pictures/wood%20background.jpg");
+            background-image: url("https://porters-rare-heritage-turkeys.neocities.org/Pictures/wood%20background.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -1116,10 +1116,6 @@
     document.head.appendChild(networkQueue); 
 })();
 
-
-
-
-
 function updateSuggestions(type) {
     const inputElement = document.getElementById(type + 'Suggestion');
     const dropdownElement = document.getElementById(type + 'Suggestions');
@@ -1436,10 +1432,7 @@ function closeDonationPopup() {
 }
 
         
-        
-        
-
-   function displayGenotypeImage(containerId, variety, gender, genotype = '') {
+function displayGenotypeImage(containerId, variety, gender, genotype = '') {
     const imageContainer = document.getElementById(containerId);
     const sexPrefix = gender === 'Male' ? 'M' : 'F';
     const trimmedVariety = variety.trim();
@@ -1554,8 +1547,8 @@ function displayResults(containerId, results, gender) {
 }
 
  function setDefaultImages() {
-            const defaultSireImage = 'Pictures/TomClipArt.jpg';
-            const defaultDamImage = 'Pictures/HenClipArt.jpg';
+            const defaultSireImage = 'https://porters-rare-heritage-turkeys.neocities.org/Pictures/TomClipArt.jpg';
+            const defaultDamImage = 'https://porters-rare-heritage-turkeys.neocities.org/Pictures/HenClipArt.jpg';
 
             displayDefaultImage('sireImageContainer', defaultSireImage);
             displayDefaultImage('damImageContainer', defaultDamImage);
