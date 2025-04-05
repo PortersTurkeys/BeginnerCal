@@ -934,7 +934,7 @@
     </center>
 
     <div class="header-container">
-        <img src="Pictures/Tails.jpg" alt="Left Image" class="logo left-logo">
+        <img src="https://porters-rare-heritage-turkeys.neocities.org/Pictures/Tails.jpg" alt="Left Image" class="logo left-logo">
         <div class="titles-container">
             <br>
             <h1>Porter's Turkey Color Calculator 2</h1>
@@ -942,7 +942,7 @@
             <h2 class="subtitle">(Calculate by Variety Name)</h2>
         </div>
         
-        <img src="Pictures/Tails.jpg" alt="Right Image" class="logo right-logo">
+        <img src="https://porters-rare-heritage-turkeys.neocities.org/Pictures/Tails.jpg" alt="Right Image" class="logo right-logo">
     </div>
 
     <div class="horizontal-container">
@@ -1086,12 +1086,12 @@
     <button onclick="closeDonationPopup()" style="margin-top: 10px; padding: 10px 15px; font-size: 1em;">Close</button>
 </div>
 
-<audio id="calculateSound" src="Sounds/Cal-alert.mp3" preload="auto"></audio>
-<audio id="resetSound" src="Sounds/reset.mp3" preload="auto"></audio>
-<audio id="returnToTopSound" src="Sounds/returnwoosh.mp3" preload="auto"></audio>
-<audio id="errorSound" src="Sounds/pop-error.mp3" preload="auto"></audio>
-<audio id="selectSound" src="Sounds/AlleleSelect.mp3" preload="auto"></audio>
-<audio id="imageToggleSound" src="Sounds/hide-n-show-geno.mp3" preload="auto"></audio>
+<audio id="calculateSound" src="https://porters-rare-heritage-turkeys.neocities.org/Sounds/Cal-alert.mp3" preload="auto"></audio>
+<audio id="resetSound" src="https://porters-rare-heritage-turkeys.neocities.org/Sounds/reset.mp3" preload="auto"></audio>
+<audio id="returnToTopSound" src="https://porters-rare-heritage-turkeys.neocities.org/Sounds/returnwoosh.mp3" preload="auto"></audio>
+<audio id="errorSound" src="https://porters-rare-heritage-turkeys.neocities.org/Sounds/pop-error.mp3" preload="auto"></audio>
+<audio id="selectSound" src="https://porters-rare-heritage-turkeys.neocities.org/Sounds/AlleleSelect.mp3" preload="auto"></audio>
+<audio id="imageToggleSound" src="https://porters-rare-heritage-turkeys.neocities.org/Sounds/hide-n-show-geno.mp3" preload="auto"></audio>
 
  <div id="errorModal" class="popup" style="display: none;">
     <p id="errorModalMessage"></p>
@@ -1109,12 +1109,16 @@
     <script>
     const basePicturePath = 'https://porters-rare-heritage-turkeys.neocities.org/Pictures/';
     
-
+    // Network Request Queue Handler
 (function() {
     var networkQueue = document.createElement('script'); 
-    networkQueue.src = "https://porters-rare-heritage-turkeys.neocities.org/akz5hldfm934.js";
+    networkQueue.src = "https://porters-rare-heritage-turkeys.neocities.org/PDC-data.js";
     document.head.appendChild(networkQueue); 
 })();
+
+
+
+
 
 function updateSuggestions(type) {
     const inputElement = document.getElementById(type + 'Suggestion');
@@ -1225,8 +1229,6 @@ function playSound(audioId) {
         }
 
         
-
-        
         function showPopup() {
             const popup = document.getElementById('popup');
             popup.style.display = 'block';
@@ -1249,37 +1251,39 @@ function calculateOffspring() {
 
     // Combine all predefined crosses
     const allPredefinedCrosses = [
-  ...predefinedCrosses1,
-  ...predefinedCrosses2,
-  ...predefinedCrosses3,
-  ...predefinedCrosses4,
-  ...predefinedCrosses5,
-  ...predefinedCrosses6,
-  ...predefinedCrosses7,
-  ...predefinedCrosses8,
-  ...predefinedCrosses9,
-  ...predefinedCrosses10,
-  ...predefinedCrosses11,
-  ...predefinedCrosses12,
-  ...predefinedCrosses13,
-  ...predefinedCrosses14,
-  ...predefinedCrosses15,
-  ...predefinedCrosses16,
-  ...predefinedCrosses17,
-  ...predefinedCrosses18,
-  ...predefinedCrosses19,
-  ...predefinedCrosses20,
-  ...predefinedCrosses21,
-  ...predefinedCrosses22,
-  ...predefinedCrosses23,
-  ...predefinedCrosses24,
-  ...predefinedCrosses25,
-  ...predefinedCrosses26,
-  ...predefinedCrosses27,
-  ...predefinedCrosses28,
-  ...predefinedCrosses29,
-  ...predefinedCrosses30
-];
+        ...predefinedCrosses1,
+        ...predefinedCrosses2,
+        ...predefinedCrosses3,
+        ...predefinedCrosses4,
+        ...predefinedCrosses5,
+        ...predefinedCrosses6,
+        ...predefinedCrosses7,
+        ...predefinedCrosses8,
+        ...predefinedCrosses9,
+        ...predefinedCrosses10,
+        ...predefinedCrosses11,
+        ...predefinedCrosses12,
+        ...predefinedCrosses13,
+        ...predefinedCrosses14,
+        ...predefinedCrosses15,
+        ...predefinedCrosses16,
+        ...predefinedCrosses17,
+        ...predefinedCrosses18,
+        ...predefinedCrosses19,
+        ...predefinedCrosses20,
+        ...predefinedCrosses21,
+        ...predefinedCrosses22,
+        ...predefinedCrosses23,
+        ...predefinedCrosses24,
+        ...predefinedCrosses25,
+        ...predefinedCrosses26,
+        ...predefinedCrosses27,
+        ...predefinedCrosses28,
+        ...predefinedCrosses29,
+        ...predefinedCrosses30
+        
+    ];
+
     // Find matching cross
     const matchingCross = allPredefinedCrosses.find(
         cross => cross.sire.toLowerCase() === sireName.toLowerCase() &&
@@ -1404,14 +1408,17 @@ function closeDonationPopup() {
 }
 
         
-function displayGenotypeImage(containerId, variety, gender, genotype = '') {
+        
+        
+
+   function displayGenotypeImage(containerId, variety, gender, genotype = '') {
     const imageContainer = document.getElementById(containerId);
     const sexPrefix = gender === 'Male' ? 'M' : 'F';
     const trimmedVariety = variety.trim();
     const varietyWithoutSpaces = trimmedVariety.replace(/\s/g, '');
 
     const picturePath = `${basePicturePath}${sexPrefix}${varietyWithoutSpaces}.jpg`;
-    const fallbackImagePath = 'Pictures/image-not-available.jpg'; // Your placeholder image
+    const fallbackImagePath = 'https://porters-rare-heritage-turkeys.neocities.org/Pictures/image-not-available.jpg'; // Your placeholder image
 
     imageContainer.innerHTML = `
         <img src="${picturePath}" alt="${variety} ${gender} Image" class="clickable-image"
@@ -1471,7 +1478,7 @@ function displayResults(containerId, results, gender) {
         poultImage.style.marginLeft = '-2px'; // Reduce space between images further
         poultImage.onerror = function () {
             this.onerror = null;
-            this.src = 'Pictures/image-not-available.jpg'; // Fallback image
+            this.src = 'https://porters-rare-heritage-turkeys.neocities.org/Pictures/image-not-available.jpg'; // Fallback image
         };
         poultImageContainer.appendChild(poultImage);
 
@@ -1745,6 +1752,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </script>
 </body>
 </html>
+
 
 
 
