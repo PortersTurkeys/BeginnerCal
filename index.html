@@ -1224,53 +1224,8 @@ function playSound(audioId) {
             setDefaultImages();
         }
 
-        const script1 = document.createElement('script');
-        script1.src = 'PDC/PredefinedCrosses1.js';
-        document.head.appendChild(script1);
+        
 
-        const script2 = document.createElement('script');
-        script2.src = 'PDC/PredefinedCrosses2.js';
-        document.head.appendChild(script2);
-
-        const script3 = document.createElement('script');
-        script3.src = 'PDC/PredefinedCrosses3.js';
-        document.head.appendChild(script3);
-
-        const script4 = document.createElement('script');
-        script4.src = 'PDC/PredefinedCrosses4.js';
-        document.head.appendChild(script4);
-        
-        const script5 = document.createElement('script');
-        script5.src = 'PDC/PredefinedCrosses5.js';
-        document.head.appendChild(script5);
-
-        const script6 = document.createElement('script');
-        script6.src = 'PDC/PredefinedCrosses6.js';
-        document.head.appendChild(script6);
-        
-        const script7 = document.createElement('script');
-        script7.src = 'PDC/PredefinedCrosses7.js';
-        document.head.appendChild(script7);
-        
-        const script8 = document.createElement('script');
-        script8.src = 'PDC/PredefinedCrosses8.js';
-        document.head.appendChild(script8);
-        
-        const script9 = document.createElement('script');
-        script9.src = 'PDC/PredefinedCrosses9.js';
-        document.head.appendChild(script9);
-
-        const script10 = document.createElement('script');
-        script10.src = 'PDC/PredefinedCrosses10.js';
-        document.head.appendChild(script10);
-        
-        const script11 = document.createElement('script');
-        script11.src = 'PDC/PredefinedCrosses11.js';
-        document.head.appendChild(script11);
-        
-        const script12 = document.createElement('script');
-        script12.src = 'PDC/PredefinedCrosses12.js';
-        document.head.appendChild(script12);
         
         function showPopup() {
             const popup = document.getElementById('popup');
@@ -1294,20 +1249,37 @@ function calculateOffspring() {
 
     // Combine all predefined crosses
     const allPredefinedCrosses = [
-        ...predefinedCrosses1,
-        ...predefinedCrosses2,
-        ...predefinedCrosses3,
-        ...predefinedCrosses4,
-        ...predefinedCrosses5,
-        ...predefinedCrosses6,
-        ...predefinedCrosses7,
-        ...predefinedCrosses8,
-        ...predefinedCrosses9,
-        ...predefinedCrosses10,
-        ...predefinedCrosses11,
-        ...predefinedCrosses12
-    ];
-
+  ...predefinedCrosses1,
+  ...predefinedCrosses2,
+  ...predefinedCrosses3,
+  ...predefinedCrosses4,
+  ...predefinedCrosses5,
+  ...predefinedCrosses6,
+  ...predefinedCrosses7,
+  ...predefinedCrosses8,
+  ...predefinedCrosses9,
+  ...predefinedCrosses10,
+  ...predefinedCrosses11,
+  ...predefinedCrosses12,
+  ...predefinedCrosses13,
+  ...predefinedCrosses14,
+  ...predefinedCrosses15,
+  ...predefinedCrosses16,
+  ...predefinedCrosses17,
+  ...predefinedCrosses18,
+  ...predefinedCrosses19,
+  ...predefinedCrosses20,
+  ...predefinedCrosses21,
+  ...predefinedCrosses22,
+  ...predefinedCrosses23,
+  ...predefinedCrosses24,
+  ...predefinedCrosses25,
+  ...predefinedCrosses26,
+  ...predefinedCrosses27,
+  ...predefinedCrosses28,
+  ...predefinedCrosses29,
+  ...predefinedCrosses30
+];
     // Find matching cross
     const matchingCross = allPredefinedCrosses.find(
         cross => cross.sire.toLowerCase() === sireName.toLowerCase() &&
